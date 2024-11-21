@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script><!-- For graphing -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <h1 id="weather-app">Weather App</h1>
+        <input type="text" id="cityInput" placeholder="Enter city">
+        <button onclick="searchCity()">Search</button>
+        <button onclick="getUserLocation()">Use My Location</button>
+        <div>
+            <label for="units">Units:</label>
+            <select id="units" onchange="updateUnits()">
+                <option value="metric">Celsius</option>
+                <option value="imperial">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+            </select>
+        </div>
+        <div id="weather">
+            <h2 id="city"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <img id="icon" src="" alt="Weather Icon">
+        </div>
+        <div id="favorites">
+            <h2>Favorites</h2>
+            <ol id="favoriteList"></ol>
+        </div>
+        <button id = "fav" onclick="addFavorite()">Add to Favorites</button>
+        <h2 id="chart">24-Hour Forecast:</h2>
+        <canvas id="hourlyForecastChart"></canvas>
+        <h2>5-Day Forecast:</h2>
+        <div id="forecast"></div>
+        <h2>Comparison of Providers:</h2>
+        <canvas id="comparisonChart"></canvas>
+    </div>
+    <script src="basics.js"></script>
+</body>
+</html>

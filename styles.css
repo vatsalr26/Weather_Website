@@ -1,0 +1,131 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #0f1c4e, #285aeb);
+    color: #333;
+}
+
+#app {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 10px;
+    background-color: #dad8d8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#weather-app {
+    padding: 20px; 
+    background: linear-gradient(to bottom, #004d00, #00b300); 
+    border-radius: 10px; 
+    color: white; 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+#weather {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#city, #temperature, #description {
+    width: 100%; 
+    max-width: 150px; 
+    height: 50px; 
+    border: 2px solid #000; 
+    padding: 20px; 
+    background: linear-gradient(to right, #0f1c4e, #285aeb);
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 600; 
+    text-transform: uppercase; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#icon {
+    width: 20vw; 
+    height: 20vw;
+    max-width: 200px; 
+    max-height: 200px;
+    position: absolute; 
+    top: 150px; 
+    right: 230px; 
+    font-size: 60px;
+    color: #ff6347;
+}
+
+#favorites {
+    margin-top: -350px; 
+    text-align: center;
+    font-size: 25px;
+}
+
+#favoriteList {
+    text-align: center; 
+    color: #fff; 
+    font-family: 'Montserrat', sans-serif; 
+    border: 2px solid #fff; 
+    border-radius: 8px; 
+    padding: 10px; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    margin: 10px; 
+    width: 150px; 
+    max-width: 100%; 
+    display: inline-block; 
+}
+
+#chart {
+    margin-top: 200px;
+}
+
+#forecast {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#forecast .day {
+    width: 100%; 
+    max-width: 100px; 
+}
+
+.night {
+    background-color: #2e3b4e;
+    color: #fff;
+}
+
+.hot {
+    background-color: #ffad99;
+}
+
+.cold {
+    background-color: #99ccff;
+}
+
+#favoriteList {
+    list-style-type: none;
+}
+
+@media (min-width: 600px) {
+    #forecast .day {
+        width: calc(33.33% - 10px); 
+    }
+}
+
+@media (min-width: 800px) {
+    #icon {
+        right: 50px; 
+    }
+
+    #app {
+        padding: 20px; 
+    }
+
+    #weather-app {
+        padding: 30px; 
+    }
+}
